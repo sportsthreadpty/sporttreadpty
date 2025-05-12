@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fútbol - Sports Thread</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.cdnfonts.com/css/tan-nimbus" rel="stylesheet">
+  <style>
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    .dropdown-item.active {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">SPORTS THREAD</a>
+        <div class="d-lg-none flex-grow-1 d-flex justify-content-center align-items-center">
+          <a href="carrito.html" class="cart mx-2" id="cart-navbar">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Deportes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="nfl.html"><img src="Imagenes/nfl-logo-2590065059.png" alt="NFL" style="width: 20px; margin-right: 10px;"> NFL</a></li>
+                <li><a class="dropdown-item" href="mlb.html"><img src="Imagenes/mlb-logo-png_seeklogo-250501.png" alt="MLB" style="width: 20px; margin-right: 10px;"> MLB</a></li>
+                <li><a class="dropdown-item" href="nba.html"><img src="Imagenes/nba-inner-geek-covertgeek-10.png" alt="NBA" style="width: 20px; margin-right: 10px;"> NBA</a></li>
+                <li><a class="dropdown-item active" href="futbol.html"><img src="Imagenes/soccer-ball-logo-png_seeklogo-480250.png" alt="Fútbol" style="width: 20px; margin-right: 10px;"> Fútbol</a></li>
+                <li><a class="dropdown-item" href="f1.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png" alt="F1" style="width: 20px; margin-right: 10px;"> F1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <a href="carrito.html" class="cart d-none d-lg-flex" id="cart">
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </div>
+  </a>
+
+  <section class="banner parallax" data-aos="fade-in" style="background-image: url('Imagenes/futbolbanner.jpg');">
+    <div class="container">
+      <h1>Fútbol Collection</h1>
+      <p>Las mejores jerseys de los equipos más importantes del mundo</p>
+    </div>
+  </section>
+
+  <section class="products-section py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Real Madrid.png" class="card-img-top" alt="Real Madrid Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Real Madrid</h5>
+              <p class="card-text">Jersey oficial del Real Madrid</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Real Madrid Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Barcelona.png" class="card-img-top" alt="Barcelona Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Barcelona</h5>
+              <p class="card-text">Jersey oficial del Barcelona</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Barcelona Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Manchester City.png" class="card-img-top" alt="Manchester United Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Manchester United</h5>
+              <p class="card-text">Jersey oficial del Manchester United</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Manchester United Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Liverpool.png" class="card-img-top" alt="Liverpool Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Liverpool</h5>
+              <p class="card-text">Jersey oficial del Liverpool</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Liverpool Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Chelsea.png" class="card-img-top" alt="Chelsea Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Chelsea</h5>
+              <p class="card-text">Jersey oficial del Chelsea</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Chelsea Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Manchester City.png" class="card-img-top" alt="Manchester City Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Manchester City</h5>
+              <p class="card-text">Jersey oficial del Manchester City</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Manchester City Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Paris Saint-Germain.png" class="card-img-top" alt="PSG Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Paris Saint-Germain</h5>
+              <p class="card-text">Jersey oficial del PSG</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('PSG Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Bayern Munich.png" class="card-img-top" alt="Bayern Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Bayern Munich</h5>
+              <p class="card-text">Jersey oficial del Bayern Munich</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Bayern Munich Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/Juventus.png" class="card-img-top" alt="Juventus Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Juventus</h5>
+              <p class="card-text">Jersey oficial de la Juventus</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Juventus Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/AC Milan.png" class="card-img-top" alt="Milan Jersey">
+            <div class="card-body">
+              <h5 class="card-title">AC Milan</h5>
+              <p class="card-text">Jersey oficial del AC Milan</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('AC Milan Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/futbol/inter-milan.png" class="card-img-top" alt="Inter Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Inter de Milán</h5>
+              <p class="card-text">Jersey oficial del Inter de Milán</p>
+              <p class="text-success fw-bold">$45</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Inter de Milán Jersey', 45)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retro Football Section -->
+  <section class="products-section py-5">
+    <div class="container">
+      <div class="parallax-banner mb-4" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Football_iu_1996.jpg/960px-Football_iu_1996.jpg');">
+        <h3 class="text-center text-white display-5 fw-bold py-5">Jerseys Retro de Fútbol</h3>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Barcelona_1992.png" class="card-img-top" alt="Barcelona Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Barcelona 1992</h5>
+              <p class="card-text">Jersey retro del Barcelona</p>
+              <p class="text-success fw-bold">$35</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Barcelona Retro Jersey', 35)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Real_Madrid_1998.png" class="card-img-top" alt="Real Madrid Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Real Madrid 1998</h5>
+              <p class="card-text">Jersey retro del Real Madrid</p>
+              <p class="text-success fw-bold">$35</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Real Madrid Retro Jersey', 35)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Manchester_United_1999.png" class="card-img-top" alt="Manchester United Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Manchester United 1999</h5>
+              <p class="card-text">Jersey retro del Manchester United</p>
+              <p class="text-success fw-bold">$35</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Manchester United Retro Jersey', 35)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/AC_Milan_1994.png" class="card-img-top" alt="AC Milan Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">AC Milan 1994</h5>
+              <p class="card-text">Jersey retro del AC Milan</p>
+              <p class="text-success fw-bold">$35</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('AC Milan Retro Jersey', 35)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Sports Threat | Síguenos en
+        <a href="https://www.instagram.com/sportsthread_?igsh=cGpqYXIyaTFnZ2s1" class="text-light mx-1"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón de subir -->
+  <button id="btnSubir" title="Subir" style="display:none;position:fixed;bottom:40px;right:30px;z-index:9999;background:#0d6efd;color:white;border:none;border-radius:50%;width:50px;height:50px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2rem;align-items:center;justify-content:center;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 

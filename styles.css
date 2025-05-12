@@ -1,0 +1,745 @@
+:root {
+  --primary-color: #003366;
+  --secondary-color: #00c8ff;
+  --background-color: #f4f8fb;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --header-bg: #003366;
+  --footer-bg: #003366;
+  --hover-color: #004080;
+}
+
+@font-face {
+  font-family: 'Tan Nimbus';
+  src: url('fuente/TAN-NIMBUS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-top: 76px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand, .nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-family: 'Tan Nimbus', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: bold !important;
+}
+
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1920x600') center/cover;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  color: #00c8ff;
+}
+
+.banner.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner.parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner.parallax .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner.parallax h1,
+.banner.parallax p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  background-color: var(--card-bg);
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.cart {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.cart:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #E1306C;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-header h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cart-content {
+  font-size: 0.9rem;
+}
+
+#cart-items {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#user-info input {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+}
+
+.instagram-button {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  background-color: #E1306C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#dmModal .modal-body {
+  white-space: pre-line;
+}
+
+#user-info {
+  margin-bottom: 10px;
+}
+
+.sports-icons {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dee2e6;
+  width: 100%;
+}
+
+.sports-icons .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sports-icons .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  margin: 0;
+  width: 100%;
+}
+
+.sport-icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 45px;
+  width: 45px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sport-icon:hover {
+  transform: scale(1.1);
+  background-color: #e9ecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sport-icon img {
+  transition: all 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.sport-icon:hover img {
+  filter: brightness(1.1);
+}
+
+.products-section {
+  background-color: white;
+}
+
+.products-section h3 {
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: #003366;
+  font-weight: bold;
+}
+
+.btn-info {
+  background-color: #003366;
+  border-color: #003366;
+}
+
+.btn-info:hover {
+  background-color: #004080;
+  border-color: #004080;
+}
+
+/* Estilos para la página del carrito */
+#cart-items li {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cart-items li:last-child {
+  border-bottom: none;
+}
+
+.order-summary {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #E1306C;
+  border-color: #E1306C;
+}
+
+.btn-primary:hover {
+  background-color: #C13584;
+  border-color: #C13584;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Estilos para la navegación */
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  margin-right: 2rem;
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #E1306C;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+}
+
+/* Estilos para la página de contacto */
+.contact-info i {
+  width: 40px;
+  text-align: center;
+}
+
+.contact-info a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #003366;
+}
+
+#contact-form .btn-primary {
+  background-color: #003366;
+  border-color: #003366;
+}
+
+#contact-form .btn-primary:hover {
+  background-color: #004080;
+  border-color: #004080;
+}
+
+/* Estilos para las notificaciones del carrito */
+.cart-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1060;
+  min-width: 300px;
+}
+
+.cart-notification .alert {
+  margin-bottom: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos mejorados para los items del carrito */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item:hover {
+  background-color: #f8f9fa;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h6 {
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.cart-item-actions {
+  margin-left: 1rem;
+}
+
+.cart-item-actions .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Estilos para el contador del carrito en la navegación */
+.nav-link .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #E1306C;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+  overflow: hidden;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-container {
+  display: flex;
+  gap: 20px;
+  animation: bounce 1s infinite;
+  position: relative;
+  z-index: 10000;
+}
+
+.loading-ball {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  animation: rotate 2s linear infinite;
+}
+
+.loading-ball:nth-child(1) { animation-delay: 0s; }
+.loading-ball:nth-child(2) { animation-delay: 0.2s; }
+.loading-ball:nth-child(3) { animation-delay: 0.4s; }
+.loading-ball:nth-child(4) { animation-delay: 0.6s; }
+.loading-ball:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1400px) {
+  .sports-carousel .carousel-inner {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sports-carousel .carousel-item img {
+    height: 300px;
+  }
+  
+  .sports-carousel .carousel-caption {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .sports-icons .row {
+    justify-content: center;
+  }
+
+  .sport-icon {
+    height: 40px;
+    width: 40px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sports-carousel .carousel-inner {
+    aspect-ratio: 4/3;
+  }
+
+  .sports-carousel .carousel-caption {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .sports-icons .row {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .sport-icon {
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+  }
+}
+
+/* Ajustes del contenedor principal */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+/* Ajustes de la sección de productos */
+.products-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 15px;
+}
+
+/* Ajustes del menú responsivo */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background-color: #003366;
+    padding: 0;
+    z-index: 1000;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    text-align: left;
+  }
+
+  .cart {
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+    width: auto;
+    display: inline-block;
+  }
+
+  .navbar-toggler {
+    margin-left: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dropdown-menu {
+    background-color: #004080;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .dropdown-item {
+    color: white !important;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.parallax-banner {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 220px;
+  position: relative;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.parallax-banner h3 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+.parallax-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.products-section > div.mb-5 {
+  margin-bottom: 3.5rem !important;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* Estilos mejorados para el carrusel de deportes */
+.sports-carousel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.sports-carousel .carousel-inner {
+  width: 100%;
+}
+
+.sports-carousel .carousel-item {
+  position: relative;
+}
+
+.sports-carousel .carousel-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.sports-carousel .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sports-carousel .carousel-caption h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sports-carousel .carousel-caption p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.sports-carousel .carousel-control-prev,
+.sports-carousel .carousel-control-next {
+  width: 5%;
+  opacity: 0.8;
+}
+
+.sports-carousel .carousel-indicators {
+  margin-bottom: 1rem;
+}
+
+.sports-carousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+}

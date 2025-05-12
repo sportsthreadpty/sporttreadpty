@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Sports Thread</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.cdnfonts.com/css/tan-nimbus" rel="stylesheet">
+  <style>
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    .dropdown-item.active {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">SPORTS THREAD</a>
+        <div class="d-lg-none flex-grow-1 d-flex justify-content-center align-items-center">
+          <a href="carrito.html" class="cart mx-2" id="cart-navbar">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Deportes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="nfl.html"><img src="Imagenes/nfl-logo-2590065059.png" alt="NFL" style="width: 20px; margin-right: 10px;"> NFL</a></li>
+                <li><a class="dropdown-item" href="mlb.html"><img src="Imagenes/mlb-logo-png_seeklogo-250501.png" alt="MLB" style="width: 20px; margin-right: 10px;"> MLB</a></li>
+                <li><a class="dropdown-item" href="nba.html"><img src="Imagenes/nba-inner-geek-covertgeek-10.png" alt="NBA" style="width: 20px; margin-right: 10px;"> NBA</a></li>
+                <li><a class="dropdown-item" href="futbol.html"><img src="Imagenes/soccer-ball-logo-png_seeklogo-480250.png" alt="Fútbol" style="width: 20px; margin-right: 10px;"> Fútbol</a></li>
+                <li><a class="dropdown-item" href="f1.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png" alt="F1" style="width: 20px; margin-right: 10px;"> F1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item">
+            </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <a href="carrito.html" class="cart d-none d-lg-flex" id="cart">
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </div>
+  </a>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Tu Carrito de Compras</h1>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Productos en tu carrito</h5>
+            <div id="cart-items" class="list-unstyled"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Resumen del Pedido</h5>
+            <div class="order-summary mb-4">
+              <p><strong>Total:</strong> $<span id="cart-total">0</span></p>
+            </div>
+            <form id="order-form" class="mb-4">
+              <div class="mb-3">
+                <label for="user-name" class="form-label">Tu nombre</label>
+                <input type="text" id="user-name" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="user-address" class="form-label">Tu dirección o ciudad</label>
+                <input type="text" id="user-address" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="user-phone" class="form-label">Tu teléfono</label>
+                <input type="tel" id="user-phone" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="order-message" class="form-label">Mensaje adicional (opcional)</label>
+                <textarea id="order-message" class="form-control" rows="3"></textarea>
+              </div>
+            </form>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-primary" onclick="prepareInstagramMessage()">
+                <i class="fab fa-instagram me-2"></i>Preparar mensaje para Instagram
+              </button>
+              <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='index.html'">
+                <i class="fas fa-arrow-left me-2"></i>Seguir comprando
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección del mensaje de Instagram -->
+    <div id="instagram-message-section" class="mt-4" style="display: none;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title mb-4">Mensaje para Instagram</h5>
+          <div class="alert alert-info">
+            <p class="mb-2"><i class="fas fa-info-circle me-2"></i>Copia el siguiente mensaje y pégalo en nuestro Instagram:</p>
+            <div class="bg-light p-3 rounded">
+              <pre id="instagram-message" class="mb-0"></pre>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-primary" onclick="copyInstagramMessage()">
+              <i class="fas fa-copy me-2"></i>Copiar mensaje
+            </button>
+            <a href="https://www.instagram.com/sportsthread_?igsh=cGpqYXIyaTFnZ2s1" target="_blank" class="btn btn-success">
+              <i class="fab fa-instagram me-2"></i>Ir a Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Sports Threat | Síguenos en
+        <a href="https://www.instagram.com/sportsthread_?igsh=cGpqYXIyaTFnZ2s1" class="text-light mx-1"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón de subir -->
+  <button id="btnSubir" title="Subir" style="display:none;position:fixed;bottom:40px;right:30px;z-index:9999;background:#0d6efd;color:white;border:none;border-radius:50%;width:50px;height:50px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2rem;align-items:center;justify-content:center;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html> 

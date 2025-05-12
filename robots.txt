@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Sitemap: https://sportsthread.com/sitemap.xml
+
+# Permitir acceso a recursos importantes
+Allow: /Imagenes/
+Allow: /styles.css
+Allow: /script.js
+
+# Deshabilitar acceso a archivos de sistema
+Disallow: /.git/
+Disallow: /.env
+Disallow: /node_modules/ 

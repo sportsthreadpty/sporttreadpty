@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 - Sports Thread</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.cdnfonts.com/css/tan-nimbus" rel="stylesheet">
+  <style>
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    .dropdown-item.active {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">SPORTS THREAD</a>
+        <div class="d-lg-none flex-grow-1 d-flex justify-content-center align-items-center">
+          <a href="carrito.html" class="cart mx-2" id="cart-navbar">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Deportes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="nfl.html"><img src="Imagenes/nfl-logo-2590065059.png" alt="NFL" style="width: 20px; margin-right: 10px;"> NFL</a></li>
+                <li><a class="dropdown-item" href="mlb.html"><img src="Imagenes/mlb-logo-png_seeklogo-250501.png" alt="MLB" style="width: 20px; margin-right: 10px;"> MLB</a></li>
+                <li><a class="dropdown-item" href="nba.html"><img src="Imagenes/nba-inner-geek-covertgeek-10.png" alt="NBA" style="width: 20px; margin-right: 10px;"> NBA</a></li>
+                <li><a class="dropdown-item" href="futbol.html"><img src="Imagenes/soccer-ball-logo-png_seeklogo-480250.png" alt="Fútbol" style="width: 20px; margin-right: 10px;"> Fútbol</a></li>
+                <li><a class="dropdown-item active" href="f1.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png" alt="F1" style="width: 20px; margin-right: 10px;"> F1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <a href="carrito.html" class="cart d-none d-lg-flex" id="cart">
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </div>
+  </a>
+
+  <section class="banner parallax" data-aos="fade-in" style="background-image: url('Imagenes/bannerf1.jpg');">
+    <div class="container">
+      <h1>F1 Collection</h1>
+      <p>Las mejores jerseys de la Formula 1</p>
+    </div>
+  </section>
+
+  <section class="products-section py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Ferrari F1.png" class="card-img-top" alt="Ferrari Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Ferrari</h5>
+              <p class="card-text">Jersey oficial de Ferrari</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Ferrari Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Mercedes F1.png" class="card-img-top" alt="Mercedes Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Mercedes</h5>
+              <p class="card-text">Jersey oficial de Mercedes</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Mercedes Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Mercedes F1.png" class="card-img-top" alt="Red Bull Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Red Bull</h5>
+              <p class="card-text">Jersey oficial de Red Bull</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Red Bull Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/McLaren F1.png" class="card-img-top" alt="McLaren Jersey">
+            <div class="card-body">
+              <h5 class="card-title">McLaren</h5>
+              <p class="card-text">Jersey oficial de McLaren</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('McLaren Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Aston Martin F1.png" class="card-img-top" alt="Aston Martin Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Aston Martin</h5>
+              <p class="card-text">Jersey oficial de Aston Martin</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Aston Martin Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Alpine F1.png" class="card-img-top" alt="Alpine Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Alpine</h5>
+              <p class="card-text">Jersey oficial de Alpine</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Alpine Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Alfa Romeo F1.png" class="card-img-top" alt="Alfa Romeo Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Alfa Romeo</h5>
+              <p class="card-text">Jersey oficial de Alfa Romeo</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Alfa Romeo Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/f1/Haas F1.png" class="card-img-top" alt="Haas Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Haas</h5>
+              <p class="card-text">Jersey oficial de Haas</p>
+              <p class="text-success fw-bold">$50</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Haas Jersey', 50)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Sports Threat | Síguenos en
+        <a href="https://www.instagram.com/sportsthread_?igsh=cGpqYXIyaTFnZ2s1" class="text-light mx-1"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón de subir -->
+  <button id="btnSubir" title="Subir" style="display:none;position:fixed;bottom:40px;right:30px;z-index:9999;background:#0d6efd;color:white;border:none;border-radius:50%;width:50px;height:50px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2rem;align-items:center;justify-content:center;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 

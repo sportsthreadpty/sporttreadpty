@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA - Sports Thread</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.cdnfonts.com/css/tan-nimbus" rel="stylesheet">
+  <style>
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+    }
+
+    .dropdown-item img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    .dropdown-item.active {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">SPORTS THREAD</a>
+        <div class="d-lg-none flex-grow-1 d-flex justify-content-center align-items-center">
+          <a href="carrito.html" class="cart mx-2" id="cart-navbar">
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Deportes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="nfl.html"><img src="Imagenes/nfl-logo-2590065059.png" alt="NFL" style="width: 20px; margin-right: 10px;"> NFL</a></li>
+                <li><a class="dropdown-item" href="mlb.html"><img src="Imagenes/mlb-logo-png_seeklogo-250501.png" alt="MLB" style="width: 20px; margin-right: 10px;"> MLB</a></li>
+                <li><a class="dropdown-item active" href="nba.html"><img src="Imagenes/nba-inner-geek-covertgeek-10.png" alt="NBA" style="width: 20px; margin-right: 10px;"> NBA</a></li>
+                <li><a class="dropdown-item" href="futbol.html"><img src="Imagenes/soccer-ball-logo-png_seeklogo-480250.png" alt="Fútbol" style="width: 20px; margin-right: 10px;"> Fútbol</a></li>
+                <li><a class="dropdown-item" href="f1.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1200px-F1.svg.png" alt="F1" style="width: 20px; margin-right: 10px;"> F1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <a href="carrito.html" class="cart d-none d-lg-flex" id="cart">
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </div>
+  </a>
+
+  <section class="banner parallax" data-aos="fade-in" style="background-image: url('Imagenes/nba_teams-favored-to-win-champ-1986312952.jpg');">
+    <div class="container">
+      <h1>NBA Collection</h1>
+      <p>Las mejores jerseys de la National Basketball Association</p>
+    </div>
+  </section>
+
+  <section class="products-section py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Lakers.png" class="card-img-top" alt="Lakers Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Los Angeles Lakers</h5>
+              <p class="card-text">Jersey oficial de los Lakers</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Lakers Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Celtics.png" class="card-img-top" alt="Celtics Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Boston Celtics</h5>
+              <p class="card-text">Jersey oficial de los Celtics</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Celtics Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Bulls.png" class="card-img-top" alt="Bulls Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Chicago Bulls</h5>
+              <p class="card-text">Jersey oficial de los Bulls</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Bulls Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Warriors.png" class="card-img-top" alt="Warriors Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Golden State Warriors</h5>
+              <p class="card-text">Jersey oficial de los Warriors</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Warriors Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Heat.png" class="card-img-top" alt="Heat Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Miami Heat</h5>
+              <p class="card-text">Jersey oficial de los Heat</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Heat Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Brooklyn Nets.png" class="card-img-top" alt="Nets Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Brooklyn Nets</h5>
+              <p class="card-text">Jersey oficial de los Nets</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Nets Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Bucks.png" class="card-img-top" alt="Bucks Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Milwaukee Bucks</h5>
+              <p class="card-text">Jersey oficial de los Bucks</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Bucks Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Suns.png" class="card-img-top" alt="Suns Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Phoenix Suns</h5>
+              <p class="card-text">Jersey oficial de los Suns</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Suns Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Nuggets.png" class="card-img-top" alt="Nuggets Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Denver Nuggets</h5>
+              <p class="card-text">Jersey oficial de los Nuggets</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Nuggets Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/Maverick.png" class="card-img-top" alt="Mavericks Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Dallas Mavericks</h5>
+              <p class="card-text">Jersey oficial de los Mavericks</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Mavericks Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/nba/knics.png" class="card-img-top" alt="Knicks Jersey">
+            <div class="card-body">
+              <h5 class="card-title">New York Knicks</h5>
+              <p class="card-text">Jersey oficial de los Knicks</p>
+              <p class="text-success fw-bold">$40</p>
+              <button class="btn btn-info text-white" onclick="addToCart('Knicks Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retro NBA Section -->
+  <section class="products-section py-5">
+    <div class="container">
+      <div class="parallax-banner mb-4" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicago_Bulls_1996.jpg/960px-Chicago_Bulls_1996.jpg');">
+        <h3 class="text-center text-white display-5 fw-bold py-5">Jerseys Retro NBA</h3>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Bulls_1996.png" class="card-img-top" alt="Bulls Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Chicago Bulls 1996</h5>
+              <p class="card-text">Jersey retro de los Bulls</p>
+              <p class="text-success fw-bold">$40</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Bulls Retro Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Lakers_2000.png" class="card-img-top" alt="Lakers Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Lakers 2000</h5>
+              <p class="card-text">Jersey retro de los Lakers</p>
+              <p class="text-success fw-bold">$40</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Lakers Retro Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Celtics_1986.png" class="card-img-top" alt="Celtics Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Celtics 1986</h5>
+              <p class="card-text">Jersey retro de los Celtics</p>
+              <p class="text-success fw-bold">$40</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Celtics Retro Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="zoom-in">
+          <div class="card h-100">
+            <img src="Imagenes/retro/Pistons_1989.png" class="card-img-top" alt="Pistons Retro Jersey">
+            <div class="card-body">
+              <h5 class="card-title">Pistons 1989</h5>
+              <p class="card-text">Jersey retro de los Pistons</p>
+              <p class="text-success fw-bold">$40</p>
+              <div class="sizes-column mb-2">
+                <div><span class="fw-semibold">Small:</span> 5</div>
+                <div><span class="fw-semibold">Medium:</span> 8</div>
+                <div><span class="fw-semibold">Large:</span> 6</div>
+                <div><span class="fw-semibold">XL:</span> 4</div>
+              </div>
+              <button class="btn btn-info text-white" onclick="addToCart('Pistons Retro Jersey', 40)">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Sports Threat | Síguenos en
+        <a href="https://www.instagram.com/sportsthread_?igsh=cGpqYXIyaTFnZ2s1" class="text-light mx-1"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón de subir -->
+  <button id="btnSubir" title="Subir" style="display:none;position:fixed;bottom:40px;right:30px;z-index:9999;background:#0d6efd;color:white;border:none;border-radius:50%;width:50px;height:50px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2rem;align-items:center;justify-content:center;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
